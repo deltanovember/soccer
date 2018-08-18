@@ -24,28 +24,6 @@ export default {
     };
   },
 
-  methods: {
-    shoot() {
-      const results = ["miss", "score"];
-
-      this.status = results[Math.floor(Math.random() * results.length)];
-
-      setTimeout(() => {
-        this.reset();
-      }, 800);
-    },
-
-    reset() {
-      this.status = "reset";
-      setTimeout(() => {
-        this.status = "";
-      }, 500);
-    },
-
-    imageSrc() {
-      return "/static/soccer-goal.png";
-    }
-  }
 };
 </script>
 

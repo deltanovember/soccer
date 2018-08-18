@@ -2,17 +2,21 @@
       <img
         :class="goalClass"
         class="soccer-goal"
-        src="/static/soccer-goal.png"
+        :src="imageSrc()"
         alt="Soccer goal">
 </template>
 <script>
+export default {
+  data() {
+    return {
+      goalClass: "something"
+    };
+  },
 
-    export default {
-        data() {
-            return {
-                goalClass: "something"
-            }
-        }
-    
+  methods: {
+    imageSrc() {
+      return "/static/soccer-goal.png";
     }
+  }
+};
 </script>
